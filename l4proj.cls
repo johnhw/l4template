@@ -28,7 +28,7 @@
 \usepackage{ifpdf}
 \usepackage{titlesec}
 \usepackage{color}
-\usepackage{xcolor}
+\usepackage[table,svgnames]{xcolor}
 \usepackage{parskip}
 \usepackage{listings}
 
@@ -91,7 +91,7 @@
 % enable styled captions
 \usepackage[format=plain,
 labelfont={bf,it},
-textfont=it]{caption}
+textfont=it,tableposition=above]{caption}
 
 % style the sections and the abstract
 \allsectionsfont{\normalfont}
@@ -162,7 +162,7 @@ textfont=it]{caption}
   \global\let\date\relax
   \global\let\and\relax
 }
-
+\usepackage{booktabs}
 % set up headers and footers
 % no footer, page numbers at top-right
 \usepackage{fancyhdr}

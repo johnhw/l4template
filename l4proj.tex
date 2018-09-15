@@ -19,12 +19,11 @@
 %% ABSTRACT
 \begin{abstract}
     Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
+    \vskip 2em
     "XYZ is bad. This project investigated ABC to determine if it was better. 
     ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
     never been used together. It was found that  
     ABC was 20\% better than XYZ, though it caused rabies in half of subjects."
-
-
 \end{abstract}
 
 %==============================================================================
@@ -222,45 +221,41 @@ extremely tedious otherwise.
     \begin{tabular}{@{}lll@{}}
     %\toprule
     \textbf{Operation}    & \textbf{Syntax}                & \textbf{Function}                            \\ %\midrule % optional rule for header
-    Addition              & a + b                          & add(a, b)                                    \\
-    Concatenation         & seq1 + seq2                    & concat(seq1, seq2)                           \\
-    Containment Test      & obj in seq                     & contains(seq, obj)                           \\
-    Division              & a / b                          & div(a, b)                                    \\
-    Division              & a / b                          & truediv(a, b)                                \\
-    Division              & a // b                         & floordiv(a, b)                               \\
-    Bitwise And           & a \& b                         & and\_(a, b)                                  \\
-    Bitwise Exclusive Or  & a \textasciicircum b           & xor(a, b)                                    \\
-    Bitwise Inversion     & $\sim$a                        & invert(a)                                    \\
-    Bitwise Or            & a | b                          & or\_(a, b)                                   \\
-    Exponentiation        & a ** b                         & pow(a, b)                                    \\
-    Identity              & a is b                         & is\_(a, b)                                   \\
-    Identity              & a is not b                     & is\_not(a, b)                                \\
-    Indexed Assignment    & obj{[}k{]} = v                 & setitem(obj, k, v)                           \\
-    Indexed Deletion      & del obj{[}k{]}                 & delitem(obj, k)                              \\
-    Indexing              & obj{[}k{]}                     & getitem(obj, k)                              \\
-    Left Shift            & a \textless{}\textless b       & lshift(a, b)                                 \\
-    Modulo                & a \% b                         & mod(a, b)                                    \\
-    Multiplication        & a * b                          & mul(a, b)                                    \\
-    Negation (Arithmetic) & - a                            & neg(a)                                       \\
-    Negation (Logical)    & not a                          & not\_(a)                                     \\
-    Positive              & + a                            & pos(a)                                       \\
-    Right Shift           & a \textgreater{}\textgreater b & rshift(a, b)                                 \\
-    Sequence Repetition   & seq * i                        & repeat(seq, i)                               \\
-    Slice Assignment      & seq{[}i:j{]} = values          & setitem(seq, slice(i, j), values)            \\
-    Slice Deletion        & del seq{[}i:j{]}               & delitem(seq, slice(i, j))                    \\
-    Slicing               & seq{[}i:j{]}                   & getitem(seq, slice(i, j))                    \\
-    String Formatting     & s \% obj                       & mod(s, obj)                                  \\
-    Subtraction           & a - b                          & sub(a, b)                                    \\
-    Truth Test            & obj                            & truth(obj)                                   \\
-    Ordering              & a \textless b                  & lt(a, b)                                     \\
-    Ordering              & a \textless{}= b               & le(a, b)                                     \\
-    Equality              & a == b                         & eq(a, b)                                     \\
-    Difference            & a != b                         & ne(a, b)                                     \\
-    Ordering              & a \textgreater{}= b            & ge(a, b)                                     \\
-    Ordering              & a \textgreater b               & gt(a, b)                                     \\ 
+    Addition              & \texttt{a + b}                          & \texttt{add(a, b)}                                    \\
+    Concatenation         & \texttt{seq1 + seq2}                    & \texttt{concat(seq1, seq2)}                           \\
+    Containment Test      & \texttt{obj in seq}                     & \texttt{contains(seq, obj)}                           \\
+    Division              & \texttt{a / b}                          & \texttt{div(a, b) }  \\
+    Division              & \texttt{a / b}                          & \texttt{truediv(a, b) } \\
+    Division              & \texttt{a // b}                         & \texttt{floordiv(a, b)}                               \\
+    Bitwise And           & \texttt{a \& b}                         & \texttt{and\_(a, b)}                                  \\
+    Bitwise Exclusive Or  & \texttt{a \textasciicircum b}           & \texttt{xor(a, b)}                                    \\
+    Bitwise Inversion     & \texttt{$\sim$a}                        & \texttt{invert(a)}                                    \\
+    Bitwise Or            & \texttt{a | b}                          & \texttt{or\_(a, b)}                                   \\
+    Exponentiation        & \texttt{a ** b}                         & \texttt{pow(a, b)}                                    \\
+    Identity              & \texttt{a is b}                         & \texttt{is\_(a, b)}                                   \\
+    Identity              & \texttt{a is not b}                     & \texttt{is\_not(a, b)}                                \\
+    Indexed Assignment    & \texttt{obj{[}k{]} = v}                 & \texttt{setitem(obj, k, v)}                           \\
+    Indexed Deletion      & \texttt{del obj{[}k{]}}                 & \texttt{delitem(obj, k)}                              \\
+    Indexing              & \texttt{obj{[}k{]}}                     & \texttt{getitem(obj, k)}                              \\
+    Left Shift            & \texttt{a \textless{}\textless b}       & \texttt{lshift(a, b)}                                 \\
+    Modulo                & \texttt{a \% b}                         & \texttt{mod(a, b)}                                    \\
+    Multiplication        & \texttt{a * b}                          & \texttt{mul(a, b)}                                    \\
+    Negation (Arithmetic) & \texttt{- a}                            & \texttt{neg(a)}                                       \\
+    Negation (Logical)    & \texttt{not a}                          & \texttt{not\_(a)}                                     \\
+    Positive              & \texttt{+ a}                            & \texttt{pos(a)}                                       \\
+    Right Shift           & \texttt{a \textgreater{}\textgreater b} & \texttt{rshift(a, b)}                                 \\
+    Sequence Repetition   & \texttt{seq * i}                        & \texttt{repeat(seq, i)}                               \\
+    Slice Assignment      & \texttt{seq{[}i:j{]} = values}          & \texttt{setitem(seq, slice(i, j), values)}            \\
+    Slice Deletion        & \texttt{del seq{[}i:j{]}}               & \texttt{delitem(seq, slice(i, j))}                    \\
+    Slicing               & \texttt{seq{[}i:j{]}}                   & \texttt{getitem(seq, slice(i, j))}                    \\
+    String Formatting     & \texttt{s \% obj}                       & \texttt{mod(s, obj)}                                  \\
+    Subtraction           & \texttt{a - b}                          & \texttt{sub(a, b)}                                    \\
+    Truth Test            & \texttt{obj}                            & \texttt{truth(obj)}                                   \\
+    Ordering              & \texttt{a \textless b}                  & \texttt{lt(a, b)}                                     \\
+    Ordering              & \texttt{a \textless{}= b}               & \texttt{le(a, b)}                                     \\
     % \bottomrule
     \end{tabular}
-     \end{table}
+    \end{table}
 \subsection{Code}
 
 Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible.

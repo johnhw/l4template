@@ -102,7 +102,7 @@ textfont=it,tableposition=above]{caption}
 \allsectionsfont{\secfont}
 
 
-\renewcommand{\abstractnamefont}{\Huge\secfont}
+\renewcommand{\abstractnamefont}{\Large\secfont}
 \usepackage[toc]{appendix}
 
 % allow subfloats
@@ -136,7 +136,10 @@ textfont=it,tableposition=above]{caption}
       \vspace{2cm}
         \Large
         \vskip 8em%
+      
         \begin{center}
+          
+          \color{UniBlue}
             \noindent
             {\Huge  \@title \par}%
             \Large
@@ -146,10 +149,12 @@ textfont=it,tableposition=above]{caption}
               \textbf{\@author}
             \end{tabular}\par%
             \@date
+          
         \end{center}
+      
         \vskip 3em%
         \noindent
-        
+      
         \vskip 6em%
         \normalsize
         \noindent

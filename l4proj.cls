@@ -20,6 +20,7 @@
 \LoadClass[10pt,a4paper]{report}
 % Monospace font is Fira Mono Sans
 \usepackage{FiraMono}
+\usepackage{FiraSans}
 % the body font used is FBB
 \usepackage{fbb}
 \usepackage{textcomp}
@@ -95,11 +96,12 @@
 labelfont={bf,it},
 textfont=it,tableposition=above]{caption}
 
+\newcommand{\secfont}{\normalfont\sffamily}
 % style the sections and the abstract
-\allsectionsfont{\normalfont}
+\allsectionsfont{\secfont}
 
 
-\renewcommand{\abstractnamefont}{\normalfont\Huge}
+\renewcommand{\abstractnamefont}{\Huge\secfont}
 \usepackage[toc]{appendix}
 
 % allow subfloats
@@ -187,7 +189,7 @@ textfont=it,tableposition=above]{caption}
 \titleformat{\chapter}[display]
   % only show numbers if they aren't Chapter 0 (i.e. front matter)
   {\normalfont}{}{0pt}{
-    \huge\bfseries
+    \huge\bfseries\secfont
     \IfInteger{\thechapter}{\ifnum0=0\thechapter\relax\else\relax \thechapter\ \fi}
     {\thechapter \ }}
   [\titlerule]

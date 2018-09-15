@@ -140,6 +140,13 @@ read these, but they will improve how you write.
 \item
   \emph{The Sense of Style} \cite{Pin15} Excellent, though in-depth.
 
+\subsubsection{Citation styles}
+
+\begin{itemize}
+\item If you are referring to a reference as a noun, then cite it as:``\citet{Orw68} discusses the role of language in political thought.''
+\item If you are referring to implicitly, use ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
+
+\end{itemize}
 
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,6 +191,24 @@ These points apply to the whole dissertation, not just this chapter.
 \emph{Always} refer to figures included, like Figure \ref{fig:relu}. Include full, explanatory captions and make sure the figures look good on the page.
 You may include multiple figures in one float as in Figure \ref{fig:synthetic} using \texttt{subcaption}, which is enabled in the template.
 
+
+
+% Figures are important. Use them well.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
+
+    \caption{In figure captions, explain what the reader is looking at: "A schematic of the rectifying linear unit, where $a$ is the output amplitude,
+    $d$ is a configurable dead-zone, and $Z_j$ is the input signal", as well as why the reader is looking at this: 
+    "It is notable that there is no activation \emph{at all} below 0, which explains our initial results." 
+    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+    }
+
+    % use the notation fig:name to cross reference a figure
+    \label{fig:relu} 
+\end{figure}
+
+
 \begin{figure}
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
@@ -205,20 +230,7 @@ You may include multiple figures in one float as in Figure \ref{fig:synthetic} u
     }\label{fig:synthetic}
 \end{figure}
 
-% Figures are important. Use them well.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
-
-    \caption{In figure captions, explain what the reader is looking at: "A schematic of the rectifying linear unit, where $a$ is the output amplitude,
-    $d$ is a configurable dead-zone, and $Z_j$ is the input signal", as well as why the reader is looking at this: 
-    "It is notable that there is no activation \emph{at all} below 0, which explains our initial results." 
-    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
-    }
-
-    % use the notation fig:name to cross reference a figure
-    \label{fig:relu} 
-\end{figure}
+\clearpage
 
 \subsection{Equations}
 

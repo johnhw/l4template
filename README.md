@@ -1,5 +1,4 @@
-# l4template
-UofG SoCS Level 4 Project LaTeX template
+# UofG SoCS Level 4 Project LaTeX template
 
 Provides `l4proj.cls`, the standard LaTeX template for Honours Individual Projects.
 

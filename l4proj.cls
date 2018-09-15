@@ -53,7 +53,7 @@
 \bibpunct{(}{)}{;}{a}{}{;}
 
 \usepackage{etoolbox}
-\usepackage{titlesec} % section heading formatting
+\usepackage[compact]{titlesec} % section heading formatting
 \usepackage{color} % colors
 \usepackage[table,svgnames]{xcolor}
 \usepackage{parskip} % adjustable line spacing
@@ -126,8 +126,8 @@ textfont=it,tableposition=above]{caption}
 
 
 % fix the margins and linespacing
-\usepackage[top=4.0cm,bottom=5.5cm,left=3.5cm,right=3.5cm]{geometry}
-\setlength{\parskip}{10pt plus 2pt}
+\usepackage[top=4.0cm,bottom=5.5cm,left=3.6cm,right=3.6cm]{geometry}
+\setlength{\parskip}{5pt plus 2pt}
 
 % define the title page
 \renewcommand\maketitle{
@@ -255,9 +255,9 @@ textfont=it,tableposition=above]{caption}
 \captionsetup{subrefformat=parens}
 
 % adjust spacing
-\titlespacing{\section}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\section}{0pt}{\baselineskip}{-\baselineskip}
+\titlespacing*{\subsection}{0pt}{\parskip}{-\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{\parskip}{-\baselineskip}
 
 % switch to roman numeral for frontmatter
 \pagenumbering{roman}

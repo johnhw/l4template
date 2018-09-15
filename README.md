@@ -1,6 +1,8 @@
 # l4template
 UofG SoCS Level 4 Project LaTeX template
 
+Provides `l4proj.cls`, the standard LaTeX template for Honours Individual Projects.
+
 ## Notes on formatting
 
 The first page, abstract and table of contents are numbered using Roman numerals and are not
@@ -12,3 +14,6 @@ to but excluding the appendices and bibliography.
 
 **You must not alter font, text size (it is currently 10pt), margins or spacing.**
 
+## LaTeX
+This template has been tested with `pdflatex`. Note that on Linux you may need to copy the contents of the `fonts/` folder to
+`~/.fonts/`.

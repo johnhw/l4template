@@ -21,9 +21,24 @@
 % Monospace font is Fira Mono Sans
 \usepackage{FiraMono}
 \usepackage{FiraSans}
+
+
 % the body font used is FBB
 \usepackage{fbb}
 \usepackage{textcomp}
+
+\usepackage{iftex}
+
+\ifPDFTeX
+% nothing to do
+
+\else
+% make sure the fonts are actually set
+\usepackage{fontspec}
+\setromanfont[Path=./fonts/, BoldFont=*-Bold, UprightFont=*-Regular, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]{fbb}
+\setmonofont[Path=./fonts/, BoldFont=*-Bold, UprightFont=*-Regular]{FiraMono.ttf}
+\setsansfont[Path=./fonts/, BoldFont=*-Bold, UprightFont=*-Regular, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]{FiraSans.ttf}
+\fi
 
 \usepackage[libertine,bigdelims,vvarbb]{newtxmath} % bb from STIX
 \usepackage[cal=boondoxo]{mathalfa} % mathcal

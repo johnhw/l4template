@@ -18,6 +18,12 @@
 
 \ProcessOptions
 \LoadClass[10pt,a4paper]{report}
+% Monospace font is Fira Mono Sans
+\usepackage{FiraMono}
+% the body font used is FBB
+\usepackage{fbb}
+
+
 
 \usepackage{microtype}
 \usepackage{anyfontsize}
@@ -25,7 +31,7 @@
 \usepackage{abstract}
 \usepackage{natbib}
 \usepackage{etoolbox}
-\usepackage{ifpdf}
+
 \usepackage{titlesec}
 \usepackage{color}
 \usepackage[table,svgnames]{xcolor}
@@ -71,17 +77,10 @@
 % nice number printing
 \usepackage{numprint}
 
-% Monospace font is Fira Mono Sans
-\usepackage[T1]{fontenc}
-\usepackage{FiraMono}
-\usepackage[sfdefault,scaled=.85]{FiraSans}
 
 
-\ifpdf
-\usepackage[pdftex]{graphicx}
-\else
+
 \usepackage{graphicx}
-\fi
 % allow section styling
 \usepackage{sectsty}
 
@@ -95,14 +94,14 @@ textfont=it,tableposition=above]{caption}
 
 % style the sections and the abstract
 \allsectionsfont{\normalfont}
-\renewcommand{\abstractnamefont}{\normalfont\Huge\scshape}
+
+
+\renewcommand{\abstractnamefont}{\normalfont\Huge}
 \usepackage[toc]{appendix}
 
 % allow subfloats
 \usepackage{subcaption}
 
-% the body font used is Erewhon
-\usepackage{erewhon}
 
 % fix the margins and linespacing
 \usepackage[top=4.0cm,bottom=5.5cm,left=3.5cm,right=3.5cm]{geometry}
@@ -183,10 +182,10 @@ textfont=it,tableposition=above]{caption}
 \usepackage{xstring}
 \titleformat{\chapter}[display]
   % only show numbers if they aren't Chapter 0 (i.e. front matter)
-  {\normalfont\scshape}{}{0pt}{
-    \Huge
-    \IfInteger{\thechapter}{\ifnum0=0\thechapter\relax\else\relax \thechapter.\ \fi}
-    {\thechapter .\ }}
+  {\normalfont}{}{0pt}{
+    \huge\bfseries
+    \IfInteger{\thechapter}{\ifnum0=0\thechapter\relax\else\relax \thechapter\ \fi}
+    {\thechapter \ }}
   [\titlerule]
   \titlespacing*{\chapter}      
   {0pt}{0pt}{15pt}  
@@ -247,3 +246,4 @@ Consent for educational reuse withheld. Do not distribute.
 \partopsep=0pt plus 1pt minus 1pt
 \parsep=1pt plus 1pt
 \itemsep=\parsep}
+

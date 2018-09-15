@@ -11,7 +11,7 @@
 *.cb
 *.cb2
 .*.lb
-l4proj.pdf
+l4proj*.pdf
 
 test/
 

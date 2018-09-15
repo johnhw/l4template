@@ -1,4 +1,3 @@
-
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
 
 \documentclass{l4proj}
@@ -49,40 +48,30 @@
 \tableofcontents
 
 %==============================================================================
-
 %% Notes on formatting
-
+%==============================================================================
 % The first page, abstract and table of contents are numbered using Roman numerals and are not
 % included in the page count. 
-
+%
 % From now on pages are numbered
 % using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call
 % \pagenumbering{arabic} and this should be called once only in the document. 
-
+%
 % The first Chapter should then be on page 1. You are allowed 40 pages for a 40 credit project and 20 pages for a 
 % 20 credit report. This includes everything numbered in Arabic numerals (excluding front matter) up
 % to but excluding the appendices and bibliography.
-
+%
 % You must not alter text size (it is currently 10pt) or alter margins or spacing.
-
-% Note that in this example, and some of the others, you need to execute the following commands the first time you process the files.
-% Multiple calls to pdflatex are required to resolve references to labels and citations. The file bib.bib is the bibliography file.
-
-% 
-
-%             > pdflatex example0
-%             > bibtex example0
-%             > pdflatex example0
-%             > pdflatex example0
-
-% 
-
+%
+%
 %==================================================================================================================================
+%
+% IMPORTANT
 % The chapter headings here are **suggestions**. You don't have to follow this model if
 % it doesn't fit your project. Every project should have an introduction and conclusion,
 % however. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%==================================================================================================================================
 \chapter{Introduction}
 
 % reset page numbering. Don't remove this!
@@ -133,12 +122,11 @@ read these, but they will improve how you write.
     \item
     \emph{Style: The Basics of Clarity and Grace} \cite{Wil09} A very popular modern English style guide.
     \item
-    \emph{Politics and the English Language} \cite{Orw68}  
+    \emph{Politics and the English Language} \cite{Orw68}  A famous essay on effective, clear writing in English.
     \item
-    \emph{The Elements of Style} \cite{StrWhi07} Outdated, and
-    American, but a classic.
+    \emph{The Elements of Style} \cite{StrWhi07} Outdated, and American, but a classic.
     \item
-    \emph{The Sense of Style} \cite{Pin15} Excellent, though in-depth.
+    \emph{The Sense of Style} \cite{Pin15} Excellent, though quite in-depth.
 \end{itemize}
 
 \subsubsection{Citation styles}
@@ -159,7 +147,7 @@ read these, but they will improve how you write.
     \end{center}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 \chapter{Background}
 What did other people do, and how is it relevant to what you want to do?
 \section{Guidance}
@@ -176,19 +164,19 @@ What did other people do, and how is it relevant to what you want to do?
       references for further information.
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 \chapter{Analysis/Requirements}
 What is the problem that you want to solve, and how did you arrive at it?
 \section{Guidance}
 Make it clear how you derived the constrained form of your problem via a clear and logical process. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
 \section{Guidance}
 Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 \chapter{Implementation}
 What did you do to implement this idea, and what technical achievements did you make?
 \section{Guidance}
@@ -338,7 +326,7 @@ Avoid putting large blocks of code in the report (more than a page in one block,
 
 \end{lstlisting}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 \chapter{Evaluation} 
 How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
@@ -384,7 +372,7 @@ See the file \texttt{guide\_to\_visualising.pdf} for further information and gui
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 \chapter{Conclusion}    
 Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
 \section{Guidance}
@@ -402,10 +390,10 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
         won't get credit for things you haven't done}.
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
+%
+% 
+%==================================================================================================================================
 %  APPENDICES  
 
 \begin{appendices}
@@ -434,7 +422,7 @@ submitted separately.
 
 \end{appendices}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================================================================================================================
 %   BIBLIOGRAPHY   
 
 % The bibliography style is abbrvnat

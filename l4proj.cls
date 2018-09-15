@@ -32,10 +32,12 @@
 \usepackage{anyfontsize}
 \RequirePackage{amsmath,amsfonts,amsbsy,amssymb}
 \usepackage{abstract}
+
+% set bibliography styling
 \usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{}{;}
-\usepackage{etoolbox}
 
+\usepackage{etoolbox}
 \usepackage{titlesec}
 \usepackage{color}
 \usepackage[table,svgnames]{xcolor}
@@ -81,10 +83,9 @@
 % nice number printing
 \usepackage{numprint}
 
-
-
-
+% allow PDF graphics
 \usepackage{graphicx}
+
 % allow section styling
 \usepackage{sectsty}
 
@@ -116,6 +117,7 @@ textfont=it,tableposition=above]{caption}
 \renewcommand\maketitle{
   \begin{titlepage}%
       \definecolor{UniBlue}{HTML}{00355F}
+
         
       \let\footnotesize\small
       \let\footnoterule\relax
@@ -123,10 +125,14 @@ textfont=it,tableposition=above]{caption}
 
       % the logo, full page width
       \vspace{1in}
-      \includegraphics[width=\linewidth, trim=1.0cm 1.0cm 1.0cm 1.0cm]{images/CompSci_colour.pdf}
+      \includegraphics[width=\linewidth]{images/CompSci_colour.pdf}
+      \vskip 0.5em
+      \color{UniBlue}
+      {\large \sffamily Honours Individual Project Dissertation}\\ 
+
 
       % title and author
-      \color{UniBlue}
+      
       \vspace{2cm}
         \Large
         \vskip 8em%
@@ -149,7 +155,6 @@ textfont=it,tableposition=above]{caption}
         \noindent
         % footer at bottom of page
         \vfill
-        Honours Individual Project Dissertation\\ 
 
     
   \end{titlepage}%

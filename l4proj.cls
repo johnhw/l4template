@@ -86,8 +86,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{caption}
 
-\allsectionsfont{\sffamily}
-\renewcommand{\abstractnamefont}{\normalfont\sffamily\Huge\bfseries}
+\allsectionsfont{\normalfont}
+%\renewcommand{\abstractnamefont}{\normalfont\sffamily\Huge\bfseries}
 \usepackage[toc,page]{appendix}
 \usepackage{erewhon}
 %\RequirePackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc.).
@@ -110,7 +110,7 @@
   \Large
   \vskip 8em%
   \noindent
-  {\LARGE \sffamily \@title \par}%
+  {\LARGE  \@title \par}%
   \large
   \lineskip .75em%
   \noindent
@@ -144,7 +144,7 @@
 }
 
 \titleformat{\chapter}[display]
-  {\normalfont\sffamily\bfseries}{}{0pt}{\Huge}
+  {\normalfont\scshape}{}{0pt}{\Huge}
 
 \newcommand{\educationalconsent}{
 \ifdefined\consentname
@@ -164,6 +164,11 @@ Signature: & \consentname & Date: & \consentdate \\
       &                     &            &                     \\
 \end{tabular}
 \else
+\newpage
+\section*{Education Use Consent}
+
+Consent for educational use withheld. Do not distribute.
+
 \fi 
 
 }

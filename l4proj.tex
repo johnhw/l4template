@@ -1,0 +1,324 @@
+
+% REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
+
+\documentclass{l4proj}
+
+%
+% put any additional packages here
+%
+
+\begin{document}
+
+%% METADATA
+\title{Level 4 Project Report Template}
+\author{John H. Williamson}
+\date{September 14, 2018}
+
+\maketitle
+
+%% ABSTRACT
+\begin{abstract}
+    Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
+    "XYZ is bad. This project investigated ABC to determine if it was better. 
+    ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
+    never been used together. It was found that  
+    ABC was 20\% better than XYZ, though it caused rabies in half of subjects."
+
+
+\end{abstract}
+
+%==============================================================================
+
+% EDUCATION REUSE CONSENT FORM
+% If you consent to your project being shown to future students for educational purposes
+% then insert your name and the date below to 
+% sign the education use form that appears in the front of the document. You must explicitly give
+% consent.
+%
+%\def\consentname {My Name} % your full name
+%\def\consentdate {20 March 2018} % the date you submit
+%
+\educationalconsent
+\tableofcontents
+
+%==============================================================================
+
+%% Notes on formatting
+
+% The first page, abstract and table of contents are numbered using Roman numerals and are not
+% included in the page count. 
+
+% From now on pages are numbered
+% using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call
+% \pagenumbering{arabic} and this should be called once only in the document. 
+
+% The first Chapter should then be on page 1. You are allowed 40 pages for a 40 credit project and 20 pages for a 
+% 20 credit report. This includes everything numbered in Arabic numerals (excluding front matter) up
+% to but excluding the appendices and bibliography.
+
+% You must not alter text size (it is currently 10pt) or alter margins or spacing.
+
+% Note that in this example, and some of the others, you need to execute the following commands the first time you process the files.
+% Multiple calls to pdflatex are required to resolve references to labels and citations. The file bib.bib is the bibliography file.
+
+% 
+
+%             > pdflatex example0
+%             > bibtex example0
+%             > pdflatex example0
+%             > pdflatex example0
+
+% 
+
+
+%==================================================================================================================================
+% The chapter headings here are **suggestions**. You don't have to follow this model if
+% it doesn't fit your project. Every project should have an introduction and conclusion,
+% however.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+
+% reset page numbering. Don't remove this!
+\pagenumbering{arabic} 
+
+
+Why should the reader care about what are you doing and what are you actually doing?
+\section{Guidance}
+
+\textbf{Motivate} first, then state the general problem clearly. 
+
+\section{Writing guidance}
+\subsection{Who is the reader?}
+
+This is the key question for any writing. Your reader:
+
+\begin{itemize}
+
+\item
+  is a trained computer scientist: \emph{don't explain basics}.
+\item
+  has limited time: \emph{keep on topic}.
+\item
+  has no idea why anyone would want to do this: \emph{motivate clearly}
+\item
+  might not know \emph{anything} about your project in particular:
+  \emph{explain your project}.
+\item
+  but might know precise details and check them: \emph{be precise and
+  strive for accuracy.}
+\item
+  doesn't know or care about you: \emph{personal discussions are
+  irrelevant}.
+\end{itemize}
+
+Remember, you will be marked by your supervisor and one or more members
+of staff. You might also have your project read by a prize-awarding
+committee or possibly a future employer. Bear that in mind.
+
+\subsection{References and style guides}
+There are many style guides on good English writing. You don't need to
+read these, but they will improve how you write.
+
+\begin{itemize}
+\item
+  \emph{``How to write a great research paper''} \cite{Pey17} (\textbf{recommended
+  }, even though you aren't writing a research paper)
+\item
+\emph{``How to Write with Style''} \cite{Von80}. Also short and easy to read. Available online.
+\item
+\emph{``The Elements of Style''} \cite{StrWhi07} A bit outdated, and
+  American, but a classic.
+\item
+  `\emph{`The Sense of Style''} \cite{Pin15} Excellent, though long.
+\item
+\emph{``Style: The Basics of Clarity and Grace''} \cite{Wil09}
+\item
+\emph{``Politics and the English Language''} \cite{Orw68}  
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Background}
+What did other people do, and how is it relevant to what you want to do?
+\section{Guidance}
+\begin{itemize}    
+    \item
+      Don't give a laundry list of references.
+    \item
+      Tie everything you say to your problem.
+    \item
+      Present an argument.
+    \item
+      \textbf{Don't write a tutorial}; provide background and cite
+      references for further information.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Analysis/Requirements}
+What is the problem that you want to solve, and how did you arrive at it?
+\section{Guidance}
+Make it clear how you derived the constrained form of your problem via a clear and logical process. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Design}
+How is this problem to be approached, without reference to specific implementation details? 
+\section{Guidance}
+Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Implementation}
+What did you do to implement this idea, and what technical achievements did you make?
+\section{Guidance}
+You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
+
+\section{General points}
+These points apply to the whole dissertation, not just this chapter.
+
+\subsection{Figures}
+\emph{Always} refer to figures included, like Figure \ref{fig:relu}. Include full, explanatory captions and make sure the figures look good on the page.
+
+% Figures are important. Use them well.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
+
+    \caption{In figure captions, explain what the reader is looking at: "A schematic of the rectifying linear unit, where $a$ is the output amplitude,
+    $d$ is a configurable dead-zone, and $Z_j$ is the input signal", as well as why the reader is looking at this: 
+    "It is notable that there is no activation \emph{at all} below 0, which explains our initial results." 
+    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
+    }
+
+    % use the notation fig:name to cross reference a figure
+    \label{fig:relu} 
+\end{figure}
+
+\subsection{Equations}
+
+Equations should be typeset correctly and precisely. Make sure you get parenthesis sizing correct, and punctuate equations correctly 
+(the comma is important and goes \textit{inside} the equation block).
+
+\begin{equation}
+    \hat{f}(\xi) = \frac{1}{2}\left[ \int_{-\infty}^{\infty} f(x) e^{2\pi i x \xi} \right],
+\end{equation}    
+where $\hat{f}(\xi)$ is the Fourier transform of the time domain signal $f(x)$.
+
+\subsection{Code}
+
+Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible.
+
+\begin{lstlisting}[language=python]
+    def create_callahan_table(rule="b3s23"):
+        """Generate the lookup table for the cells."""        
+        s_table = np.zeros((16, 16, 16, 16), dtype=np.uint8)
+        birth, survive = parse_rule(rule)
+
+        # generate all 16 bit strings
+        for iv in range(65536):
+            bv = [(iv >> z) & 1 for z in range(16)]
+            a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p = bv
+
+            # compute next state of the inner 2x2
+            nw = apply_rule(f, a, b, c, e, g, i, j, k)
+            ne = apply_rule(g, b, c, d, f, h, j, k, l)
+            sw = apply_rule(j, e, f, g, i, k, m, n, o)
+            se = apply_rule(k, f, g, h, j, l, n, o, p)
+
+            # compute the index of this 4x4
+            nw_code = a | (b << 1) | (e << 2) | (f << 3)
+            ne_code = c | (d << 1) | (g << 2) | (h << 3)
+            sw_code = i | (j << 1) | (m << 2) | (n << 3)
+            se_code = k | (l << 1) | (o << 2) | (p << 3)
+
+            # compute the state for the 2x2
+            next_code = nw | (ne << 1) | (sw << 2) | (se << 3)
+
+            # get the 4x4 index, and write into the table
+            s_table[nw_code, ne_code, sw_code, se_code] = next_code
+
+        return s_table
+
+\end{lstlisting}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Evaluation} 
+How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
+
+\section{Guidance}
+\begin{itemize}
+    \item
+        Ask specific questions that address the general problem.
+    \item
+        Answer them with precise evidence (graphs, numbers, statistical
+        analysis, qualitative analysis).
+    \item
+        Be fair and be scientific.
+    \item
+        The key thing is to show that you know how to evaluate your work, not
+        that your work is the most amazing product ever.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclusion}    
+Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
+\section{Guidance}
+\begin{itemize}
+    \item
+        Summarise briefly and fairly.
+    \item
+        You should be addressing the general problem you introduced in the
+        Introduction.
+    \item
+        Include summary of concrete results (``the new compiler ran 2x
+        faster'')
+    \item
+        Indicate what future work could be done, but remember: \textbf{you
+        won't get credit for things you haven't done}.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%
+%              %
+%  APPENDICES  %
+%              %
+%%%%%%%%%%%%%%%%
+\begin{appendices}
+
+\chapter{Appendices}
+
+Typical inclusions in the appendices are:
+
+\begin{itemize}
+\item
+  Copies of ethics approvals (required if obtained)
+\item
+  Copies of questionnaires etc. used to gather data from subjects.
+\item
+  Extensive tables or figures that are too bulky to fit in the main body of
+  the report, particularly ones that are repetitive and summarised in the body.
+\end{itemize}
+
+\textbf{Don't include your source code in the appendices}. It will be
+submitted separately.
+
+\end{appendices}
+
+%%%%%%%%%%%%%%%%%%%%
+%   BIBLIOGRAPHY   %
+%%%%%%%%%%%%%%%%%%%%
+
+% The bibliography style is abbrvnat
+
+\bibliographystyle{abbrvnat}
+\bibliography{l4proj}
+
+\end{document}

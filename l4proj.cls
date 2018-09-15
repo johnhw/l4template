@@ -22,14 +22,17 @@
 \usepackage{FiraMono}
 % the body font used is FBB
 \usepackage{fbb}
+\usepackage{textcomp}
 
-
+\usepackage[libertine,bigdelims,vvarbb]{newtxmath} % bb from STIX
+\usepackage[cal=boondoxo]{mathalfa} % mathcal
 
 \usepackage{microtype}
 \usepackage{anyfontsize}
-\RequirePackage{amsmath,amsfonts,amsbsy,amssymb,amsthm}
+\RequirePackage{amsmath,amsfonts,amsbsy,amssymb}
 \usepackage{abstract}
 \usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{}{;}
 \usepackage{etoolbox}
 
 \usepackage{titlesec}
@@ -134,6 +137,7 @@ textfont=it,tableposition=above]{caption}
             \begin{tabular}[t]{@{}l}%
               \textbf{\@author}
             \end{tabular}\par%
+            \@date
         \end{center}
         \vskip 3em%
         \noindent
@@ -143,7 +147,7 @@ textfont=it,tableposition=above]{caption}
         \noindent
         % footer at bottom of page
         \vfill
-        Level 4 Project Dissertation\\ \@date
+        Honours Individual Project Dissertation\\ 
 
     
   \end{titlepage}%

@@ -145,7 +145,7 @@ read these, but they will improve how you write.
 
 \begin{itemize}
 \item If you are referring to a reference as a noun, then cite it as:``\citet{Orw68} discusses the role of language in political thought.''
-\item If you are referring to implicitly, use ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
+\item If you are referring implicitly to references, use ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
 \end{itemize}
 \subsection{Plagiarism warning}
 {
@@ -258,7 +258,7 @@ If you need to include tables, like Table \ref{tab:operators}, use a tool like h
 extremely tedious otherwise. 
 
 \begin{table}[]
-    \caption{The standard table of operators in Python, along with their equivalents from the \texttt{operator} package. Note that table
+    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
     captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:operators}
     %\tt 
     \rowcolors{2}{}{gray!3}
@@ -302,9 +302,10 @@ extremely tedious otherwise.
     \end{table}
 \subsection{Code}
 
-Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible.
+Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible, as in Listing \ref{lst:callahan}.
 
-\begin{lstlisting}[language=python]
+\begin{lstlisting}[language=python, float, caption={The algorithm for packing the $3\times 3$ outer-totalistic binary CA successor rule into a 
+    $16\times 16\times 16\times 16$ 4 bit lookup table, running an equivalent, notionally 16-state $2\times 2$ CA.}, label=lst:callahan]
     def create_callahan_table(rule="b3s23"):
         """Generate the lookup table for the cells."""        
         s_table = np.zeros((16, 16, 16, 16), dtype=np.uint8)

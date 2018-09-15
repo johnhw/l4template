@@ -32,8 +32,12 @@
 \usepackage{parskip}
 \usepackage{listings}
 
+\usepackage[titles]{tocloft}
+
+\renewcommand{\cftdot}{}
+
 % from: https://gist.github.com/FelipeCortez/10729134
-\definecolor{bluekeywords}{rgb}{0.13, 0.19, 1}
+\definecolor{bluekeywords}{rgb}{0.13, 0.19, 0.7}
 \definecolor{greencomments}{rgb}{0.1, 0.5, 0.2}
 \definecolor{redstrings}{rgb}{0.8, 0.15, 0.1}
 \definecolor{graynumbers}{rgb}{0.5, 0.5, 0.5}
@@ -71,7 +75,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{FiraMono}
 \usepackage[sfdefault,scaled=.85]{FiraSans}
-\usepackage{newtxsf}
+%\usepackage{newtxsf}
 
 \ifpdf
 \usepackage[pdftex]{graphicx}

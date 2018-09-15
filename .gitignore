@@ -11,6 +11,7 @@
 *.cb
 *.cb2
 .*.lb
+l4proj.pdf
 
 ## Intermediate documents:
 *.dvi

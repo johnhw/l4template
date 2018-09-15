@@ -18,53 +18,53 @@
 
 \ProcessOptions
 \LoadClass[10pt,a4paper]{report}
+
 % Monospace font is Fira Mono Sans
-
-
-
 % the body font used is FBB
-
-\usepackage{textcomp}
 
 \usepackage{iftex}
 
 \ifPDFTeX
-% nothing to do
-\usepackage{fbb}
-\usepackage{FiraMono}
-\usepackage{FiraSans}
+  \usepackage{fbb}
+  \usepackage{FiraMono}
+  \usepackage{FiraSans}
+  \usepackage{textcomp}
+  \usepackage{babel}
+  \usepackage[T1]{fontenc}
 \else
-% make sure the fonts are actually set
-\usepackage{fontspec}
-\setromanfont[Path=./fonts/, BoldFont=fbb-Bold, UprightFont=fbb-Regular, ItalicFont=fbb-Italic, BoldItalicFont=fbb-BoldItalic]{fbb}
-\setmonofont[Path=./fonts/, BoldFont=FiraMono-Bold, UprightFont=FiraMono-Regular]{FiraMono.ttf}
-\setsansfont[Path=./fonts/, BoldFont=FiraSans-Bold, UprightFont=FiraSans-Regular, ItalicFont=FiraSans-Italic, BoldItalicFont=FiraSans-BoldItalic]{FiraSans.ttf}
+  % make sure the fonts are actually set
+  \usepackage{fontspec}
+  \usepackage{polyglossia}
+  \setromanfont[Path=./fonts/, BoldFont=fbb-Bold, UprightFont=fbb-Regular, ItalicFont=fbb-Italic, BoldItalicFont=fbb-BoldItalic]{fbb}
+  \setmonofont[Path=./fonts/, BoldFont=FiraMono-Bold, UprightFont=FiraMono-Regular]{FiraMono.ttf}
+  \setsansfont[Path=./fonts/, BoldFont=FiraSans-Bold, UprightFont=FiraSans-Regular, ItalicFont=FiraSans-Italic, BoldItalicFont=FiraSans-BoldItalic]{FiraSans.ttf}
 \fi
 
 \usepackage[libertine,bigdelims,vvarbb]{newtxmath} % bb from STIX
 \usepackage[cal=boondoxo]{mathalfa} % mathcal
 
-\usepackage{microtype}
-\usepackage{anyfontsize}
-\RequirePackage{amsmath,amsfonts,amsbsy,amssymb}
-\usepackage{abstract}
+\usepackage{microtype} % improve typography
+\usepackage{anyfontsize} % allow any size of font
+\usepackage{amsmath,amsfonts,amsbsy,amssymb}
+\usepackage{abstract} % abstract styling
 
 % set bibliography styling
 \usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{}{;}
 
 \usepackage{etoolbox}
-\usepackage{titlesec}
-\usepackage{color}
+\usepackage{titlesec} % section heading formatting
+\usepackage{color} % colors
 \usepackage[table,svgnames]{xcolor}
-\usepackage{parskip}
-\usepackage{listings}
+\usepackage{parskip} % adjustable line spacing
+\usepackage{listings} % nice code listings
 
-\usepackage[titles]{tocloft}
-
+% remove dots from ToC
+\usepackage[titles]{tocloft} 
 \renewcommand{\cftdot}{}
 
 % from: https://gist.github.com/FelipeCortez/10729134
+% set up listings for prettier output
 \definecolor{bluekeywords}{rgb}{0.13, 0.19, 0.7}
 \definecolor{greencomments}{rgb}{0.1, 0.5, 0.2}
 \definecolor{redstrings}{rgb}{0.8, 0.15, 0.1}
@@ -133,7 +133,6 @@ textfont=it,tableposition=above]{caption}
 \renewcommand\maketitle{
   \begin{titlepage}%
       \definecolor{UniBlue}{HTML}{00355F}
-
         
       \let\footnotesize\small
       \let\footnoterule\relax
@@ -145,7 +144,6 @@ textfont=it,tableposition=above]{caption}
       \vskip 0.5em
       \color{UniBlue}
       {\large \sffamily Honours Individual Project Dissertation}\\ 
-
 
       % title and author
       
@@ -224,29 +222,27 @@ textfont=it,tableposition=above]{caption}
 
 % Educational consent form
 \newcommand{\educationalconsent}{
-\ifdefined\consentname
-\newpage
-\chapter*{Education Use Consent}
+    \ifdefined\consentname
+          \newpage
+          \chapter*{Education Use Consent}
 
-I hereby grant my permission for this project to be stored, distributed and shown to other
-University of Glasgow students and staff for educational purposes. 
-\textbf{Please note that you are under no obligation to sign 
-this declaration, but doing so would help future students.}
+          I hereby grant my permission for this project to be stored, distributed and shown to other
+          University of Glasgow students and staff for educational purposes. 
+          \textbf{Please note that you are under no obligation to sign 
+          this declaration, but doing so would help future students.}
 
-\begin{tabular}{@{}llll}
-      &                     &            &                     \\
-      &                     &            &                     \\
-Signature: & \consentname & Date: & \consentdate \\
-      &                     &            &                     \\
-      &                     &            &                     \\
-\end{tabular}
-\else
-\newpage
-\chapter*{Education Use Consent}
-
-Consent for educational reuse withheld. Do not distribute.
-
-\fi 
+          \begin{tabular}{@{}llll}
+                &                     &            &                     \\
+                &                     &            &                     \\
+          Signature: & \consentname & Date: & \consentdate \\
+                &                     &            &                     \\
+                &                     &            &                     \\
+          \end{tabular}
+    \else
+    \newpage
+        \chapter*{Education Use Consent}
+        Consent for educational reuse withheld. Do not distribute.
+    \fi 
 
 }
 
@@ -268,14 +264,14 @@ Consent for educational reuse withheld. Do not distribute.
 
 % fix itemise so it looks reasonable
 \renewcommand{\@listI}{%
-\leftmargin=25pt
-\rightmargin=0pt
-\labelsep=5pt
-\labelwidth=20pt
-\itemindent=0pt
-\listparindent=0pt
-\topsep=0pt plus 2pt minus 4pt
-\partopsep=0pt plus 1pt minus 1pt
-\parsep=1pt plus 1pt
-\itemsep=\parsep}
+      \leftmargin=25pt
+      \rightmargin=0pt
+      \labelsep=5pt
+      \labelwidth=20pt
+      \itemindent=0pt
+      \listparindent=0pt
+      \topsep=0pt plus 2pt minus 4pt
+      \partopsep=0pt plus 1pt minus 1pt
+      \parsep=1pt plus 1pt
+      \itemsep=\parsep}
 

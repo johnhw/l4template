@@ -9,6 +9,7 @@
 
 \begin{document}
 
+%==============================================================================
 %% METADATA
 \title{Level 4 Project Report Template}
 \author{John H. Williamson}
@@ -16,6 +17,7 @@
 
 \maketitle
 
+%==============================================================================
 %% ABSTRACT
 \begin{abstract}
     Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
@@ -31,7 +33,7 @@
 % EDUCATION REUSE CONSENT FORM
 % If you consent to your project being shown to future students for educational purposes
 % then insert your name and the date below to  sign the education use form that appears in the front of the document. 
-% You must explicitly give consent.
+% You must explicitly give consent if you wish to do so.
 % If you sign, your project may be included in the Hall of Fame if it scores particularly highly.
 %
 % Please note that you are under no obligation to sign 
@@ -43,7 +45,7 @@
 \educationalconsent
 
 
-% ========
+%==============================================================================
 \tableofcontents
 
 %==============================================================================
@@ -75,11 +77,10 @@
 
 % 
 
-
 %==================================================================================================================================
 % The chapter headings here are **suggestions**. You don't have to follow this model if
 % it doesn't fit your project. Every project should have an introduction and conclusion,
-% however.
+% however. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
@@ -99,22 +100,21 @@ Why should the reader care about what are you doing and what are you actually do
 This is the key question for any writing. Your reader:
 
 \begin{itemize}
-
-\item
-  is a trained computer scientist: \emph{don't explain basics}.
-\item
-  has limited time: \emph{keep on topic}.
-\item
-  has no idea why anyone would want to do this: \emph{motivate clearly}
-\item
-  might not know \emph{anything} about your project in particular:
-  \emph{explain your project}.
-\item
-  but might know precise details and check them: \emph{be precise and
-  strive for accuracy.}
-\item
-  doesn't know or care about you: \emph{personal discussions are
-  irrelevant}.
+    \item
+    is a trained computer scientist: \emph{don't explain basics}.
+    \item
+    has limited time: \emph{keep on topic}.
+    \item
+    has no idea why anyone would want to do this: \emph{motivate clearly}
+    \item
+    might not know \emph{anything} about your project in particular:
+    \emph{explain your project}.
+    \item
+    but might know precise details and check them: \emph{be precise and
+    strive for accuracy.}
+    \item
+    doesn't know or care about you: \emph{personal discussions are
+    irrelevant}.
 \end{itemize}
 
 Remember, you will be marked by your supervisor and one or more members
@@ -126,29 +126,39 @@ There are many style guides on good English writing. You don't need to
 read these, but they will improve how you write.
 
 \begin{itemize}
-\item
-  \emph{How to write a great research paper} \cite{Pey17} (\textbf{recommended}, even though you aren't writing a research paper)
-\item
-\emph{How to Write with Style} \cite{Von80}. Short and easy to read. Available online.
-\item
-\emph{Style: The Basics of Clarity and Grace} \cite{Wil09} A very popular modern English style guide.
-\item
-\emph{Politics and the English Language} \cite{Orw68}  
-\item
-\emph{The Elements of Style} \cite{StrWhi07} Outdated, and
-  American, but a classic.
-\item
-  \emph{The Sense of Style} \cite{Pin15} Excellent, though in-depth.
+    \item
+    \emph{How to write a great research paper} \cite{Pey17} (\textbf{recommended}, even though you aren't writing a research paper)
+    \item
+    \emph{How to Write with Style} \cite{Von80}. Short and easy to read. Available online.
+    \item
+    \emph{Style: The Basics of Clarity and Grace} \cite{Wil09} A very popular modern English style guide.
+    \item
+    \emph{Politics and the English Language} \cite{Orw68}  
+    \item
+    \emph{The Elements of Style} \cite{StrWhi07} Outdated, and
+    American, but a classic.
+    \item
+    \emph{The Sense of Style} \cite{Pin15} Excellent, though in-depth.
+\end{itemize}
 
 \subsubsection{Citation styles}
 
 \begin{itemize}
 \item If you are referring to a reference as a noun, then cite it as:``\citet{Orw68} discusses the role of language in political thought.''
 \item If you are referring to implicitly, use ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
-
 \end{itemize}
+\subsection{Plagiarism warning}
+{
+    \setlength{\fboxsep}{24pt}
+    \begin{center}        
+        \fbox{\parbox{\linewidth}{
+            
+            WARNING: If you include material from other sources without full and correct attribution, you are commiting plagiarism. The penalties for plagiarism are severe.
+            Quote any included text and cite it correctly. Cite all images, figures, etc. clearly in the caption of the figure.
+        }}
+    \end{center}
+}
 
-\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Background}
 What did other people do, and how is it relevant to what you want to do?
@@ -188,8 +198,8 @@ You can't talk about everything. Cover the high level first, then cover importan
 These points apply to the whole dissertation, not just this chapter.
 
 \subsection{Figures}
-\emph{Always} refer to figures included, like Figure \ref{fig:relu}. Include full, explanatory captions and make sure the figures look good on the page.
-You may include multiple figures in one float as in Figure \ref{fig:synthetic} using \texttt{subcaption}, which is enabled in the template.
+\emph{Always} refer to figures included, like Figure \ref{fig:relu}, in the body of the text. Include full, explanatory captions and make sure the figures look good on the page.
+You may include multiple figures in one float, as in Figure \ref{fig:synthetic}, using \texttt{subcaption}, which is enabled in the template.
 
 
 
@@ -327,12 +337,6 @@ Avoid putting large blocks of code in the report (more than a page in one block,
 
 \end{lstlisting}
 
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evaluation} 
 How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
@@ -388,7 +392,7 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
         Summarise briefly and fairly.
     \item
         You should be addressing the general problem you introduced in the
-        Introduction.
+        Introduction.        
     \item
         Include summary of concrete results (``the new compiler ran 2x
         faster'')
@@ -400,13 +404,9 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  APPENDICES  
 
-
-%%%%%%%%%%%%%%%%
-%              %
-%  APPENDICES  %
-%              %
-%%%%%%%%%%%%%%%%
 \begin{appendices}
 
 \chapter{Appendices}
@@ -433,11 +433,11 @@ submitted separately.
 
 \end{appendices}
 
-%%%%%%%%%%%%%%%%%%%%
-%   BIBLIOGRAPHY   %
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   BIBLIOGRAPHY   
 
 % The bibliography style is abbrvnat
+% The bibliography always appears last, after the appendices.
 
 \bibliographystyle{abbrvnat}
 \bibliography{l4proj}

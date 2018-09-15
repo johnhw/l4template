@@ -84,16 +84,18 @@
 \fi
 \usepackage{sectsty}
 \usepackage[hidelinks]{hyperref}
-\usepackage{caption}
+\usepackage[format=plain,
+labelfont={bf,it},
+textfont=it]{caption}
 
 \allsectionsfont{\normalfont}
-%\renewcommand{\abstractnamefont}{\normalfont\sffamily\Huge\bfseries}
-\usepackage[toc,page]{appendix}
+\renewcommand{\abstractnamefont}{\normalfont\Huge\scshape}
+\usepackage[toc]{appendix}
 \usepackage{erewhon}
 %\RequirePackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc.).
 
-
-\usepackage[top=4.0cm,bottom=5.5cm]{geometry}
+\usepackage{pagecolor}
+\usepackage[top=4.0cm,bottom=5.5cm,left=3.5cm,right=3.5cm]{geometry}
 \setlength{\parskip}{11pt plus 2pt}
 
 \renewcommand\maketitle{\begin{titlepage}%
@@ -102,30 +104,37 @@
 \let\footnotesize\small
 \let\footnoterule\relax
 \let\footnote \thanks
+
 \vspace{1in}
-\includegraphics[width=0.4\linewidth, trim=1.0cm 1.0cm 1.0cm 1.0cm]{images/CompSci_colour}
+\includegraphics[width=\linewidth, trim=1.0cm 1.0cm 1.0cm 1.0cm]{images/CompSci_colour.pdf}
+
 
 \color{UniBlue}
 \vspace{2cm}
   \Large
   \vskip 8em%
+  \begin{center}
   \noindent
-  {\LARGE  \@title \par}%
-  \large
+  {\Huge  \@title \par}%
+  \Large
   \lineskip .75em%
   \noindent
   \begin{tabular}[t]{@{}l}%
     \textbf{\@author}
   \end{tabular}\par%
+\end{center}
   \vskip 3em%
   \noindent
   
   \vskip 6em%
+  \normalsize
   \noindent
   \vfill
   Level 4 Project Dissertation\\ \@date
-  \vfill
+
+  
 \end{titlepage}%
+\pagecolor{none}
 \setcounter{footnote}{0}%
 \global\let\thanks\relax
 \global\let\maketitle\relax
@@ -142,18 +151,39 @@
 \global\let\and\relax
 
 }
+\usepackage{fancyhdr}
 
+\pagestyle{fancy}
+% Clear the header and footer
+\fancyhead{}
+\fancyfoot{}
+% Set the right side of the footer to be the page number
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyhead[R]{\thepage}%
+}
+
+\usepackage{xstring}
 \titleformat{\chapter}[display]
-  {\normalfont\scshape}{}{0pt}{\Huge}
+  {\normalfont\scshape}{}{0pt}{
+    \Huge
+    \IfInteger{\thechapter}{\ifnum0=0\thechapter\relax\else\relax \thechapter.\ \fi}
+    {\thechapter .\ }}
+  [\titlerule]
+  \titlespacing*{\chapter}      
+  {0pt}{0pt}{15pt}  
 
 \newcommand{\educationalconsent}{
 \ifdefined\consentname
 \newpage
-\section*{Education Use Consent}
+\chapter*{Education Use Consent}
 
-I hereby give my permission for this project to be shown to other
-University of Glasgow students and to be distributed in an electronic
-format.  \textbf{Please note that you are under no obligation to sign 
+I hereby grant my permission for this project to be distributed and shown to other
+University of Glasgow students and staff for educational purposes. 
+\textbf{Please note that you are under no obligation to sign 
 this declaration, but doing so would help future students.}
 
 \begin{tabular}{@{}llll}
@@ -165,9 +195,9 @@ Signature: & \consentname & Date: & \consentdate \\
 \end{tabular}
 \else
 \newpage
-\section*{Education Use Consent}
+\chapter*{Education Use Consent}
 
-Consent for educational use withheld. Do not distribute.
+Consent for educational reuse withheld. Do not distribute.
 
 \fi 
 

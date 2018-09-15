@@ -13,6 +13,8 @@
 .*.lb
 l4proj.pdf
 
+test/
+
 ## Intermediate documents:
 *.dvi
 *.xdv

@@ -98,6 +98,8 @@ textfont=it,tableposition=above]{caption}
 \renewcommand{\abstractnamefont}{\normalfont\Huge\scshape}
 \usepackage[toc]{appendix}
 
+% allow subfloats
+\usepackage{subcaption}
 
 % the body font used is Erewhon
 \usepackage{erewhon}
@@ -222,6 +224,8 @@ Consent for educational reuse withheld. Do not distribute.
 \addtolength\topmargin{-0.5in}
 \setlength{\parindent}{0pt}
 
+% use (a) in figures
+\captionsetup{subrefformat=parens}
 
 % adjust spacing
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}

@@ -182,6 +182,28 @@ These points apply to the whole dissertation, not just this chapter.
 
 \subsection{Figures}
 \emph{Always} refer to figures included, like Figure \ref{fig:relu}. Include full, explanatory captions and make sure the figures look good on the page.
+You may include multiple figures in one float as in Figure \ref{fig:synthetic} using \texttt{subcaption}, which is enabled in the template.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{images/synthetic.png}
+        \caption{Synthetic image, black on white.}
+        \label{fig:syn1}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{images/synthetic_2.png}
+        \caption{Synthetic image, white on black.}
+        \label{fig:syn2}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)    
+    \caption{Synthetic test images for edge detection algorithms. \subref{fig:syn1} shows various gray levels that require an adaptive algorithm. \subref{fig:syn2}
+    shows more challenging edge detection tests that have crossing lines. Fusing these into full segments typically requires algorithms like the Hough transform.
+    }\label{fig:synthetic}
+\end{figure}
 
 % Figures are important. Use them well.
 \begin{figure}

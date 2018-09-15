@@ -15,5 +15,4 @@ to but excluding the appendices and bibliography.
 **You must not alter font, text size (it is currently 10pt), margins or spacing.**
 
 ## LaTeX
-This template has been tested with `pdflatex`. Note that on Linux you may need to copy the contents of the `fonts/` folder to
-`~/.fonts/`.
+This template has been tested with `pdflatex`. It should also work with `xelatex` and `lualatex`. Note that on Linux you may need to copy the contents of the `fonts/` folder to `~/.fonts/`.

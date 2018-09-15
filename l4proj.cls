@@ -19,25 +19,26 @@
 \ProcessOptions
 \LoadClass[10pt,a4paper]{report}
 % Monospace font is Fira Mono Sans
-\usepackage{FiraMono}
-\usepackage{FiraSans}
+
 
 
 % the body font used is FBB
-\usepackage{fbb}
+
 \usepackage{textcomp}
 
 \usepackage{iftex}
 
 \ifPDFTeX
 % nothing to do
-
+\usepackage{fbb}
+\usepackage{FiraMono}
+\usepackage{FiraSans}
 \else
 % make sure the fonts are actually set
 \usepackage{fontspec}
-\setromanfont[Path=./fonts/, BoldFont=*-Bold, UprightFont=*-Regular, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]{fbb}
-\setmonofont[Path=./fonts/, BoldFont=*-Bold, UprightFont=*-Regular]{FiraMono.ttf}
-\setsansfont[Path=./fonts/, BoldFont=*-Bold, UprightFont=*-Regular, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]{FiraSans.ttf}
+\setromanfont[Path=./fonts/, BoldFont=fbb-Bold, UprightFont=fbb-Regular, ItalicFont=fbb-Italic, BoldItalicFont=fbb-BoldItalic]{fbb}
+\setmonofont[Path=./fonts/, BoldFont=FiraMono-Bold, UprightFont=FiraMono-Regular]{FiraMono.ttf}
+\setsansfont[Path=./fonts/, BoldFont=FiraSans-Bold, UprightFont=FiraSans-Regular, ItalicFont=FiraSans-Italic, BoldItalicFont=FiraSans-BoldItalic]{FiraSans.ttf}
 \fi
 
 \usepackage[libertine,bigdelims,vvarbb]{newtxmath} % bb from STIX

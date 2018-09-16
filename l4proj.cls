@@ -126,7 +126,7 @@ textfont=it,tableposition=above]{caption}
 
 
 % fix the margins and linespacing
-\usepackage[top=4.0cm,bottom=5.5cm,left=3.6cm,right=3.6cm]{geometry}
+\usepackage[top=3.5cm,bottom=4.0cm,left=3.5cm,right=3.5cm]{geometry}
 \setlength{\parskip}{5pt plus 2pt}
 
 % define the title page
@@ -247,8 +247,6 @@ textfont=it,tableposition=above]{caption}
 }
 
 % adjust margins
-\addtolength\textheight{1.25in}
-\addtolength\topmargin{-0.5in}
 \setlength{\parindent}{0pt}
 
 % use (a) in figures

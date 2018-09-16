@@ -46,11 +46,12 @@
 \usepackage{microtype} % improve typography
 \usepackage{anyfontsize} % allow any size of font
 \usepackage{amsmath,amsfonts,amsbsy,amssymb}
-\usepackage{abstract} % abstract styling
+\usepackage[style]{abstract} % abstract styling
 
 % set bibliography styling
 \usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{}{;}
+
 
 \usepackage{etoolbox}
 \usepackage[compact]{titlesec} % section heading formatting
@@ -62,6 +63,7 @@
 % remove dots from ToC
 \usepackage[titles]{tocloft} 
 \renewcommand{\cftdot}{}
+\usepackage[nottoc]{tocbibind}
 
 % from: https://gist.github.com/FelipeCortez/10729134
 % set up listings for prettier output
@@ -119,6 +121,8 @@ textfont=it,tableposition=above]{caption}
 
 
 \renewcommand{\abstractnamefont}{\Large\secfont}
+\renewcommand{\abstitlestyle}[1]{{{\let\clearpage\relax \chapter*{#1}}}}
+
 \usepackage[toc]{appendix}
 
 % allow subfloats
@@ -165,15 +169,7 @@ textfont=it,tableposition=above]{caption}
             \@date
           
         \end{center}
-      
-        \vskip 3em%
-        \noindent
-      
-        \vskip 6em%
-        \normalsize
-        \noindent
-        % footer at bottom of page
-        \vfill
+ 
 
     
   \end{titlepage}%
@@ -214,9 +210,9 @@ textfont=it,tableposition=above]{caption}
   % only show numbers if they aren't Chapter 0 (i.e. front matter)
   {\normalfont}{}{0pt}{
     \huge\bfseries\secfont
-    \IfInteger{\thechapter}{\ifnum0=0\thechapter\relax\else\relax \thechapter\ \fi}
-    {\thechapter \ }}
-  [\titlerule]
+    \IfInteger{\thechapter}{\ifnum0=0\thechapter\relax\else\relax {\Huge \thechapter}\ \rule[-0.25em]{0.5pt}{1.5em}\ \fi}
+    {\thechapter \ \rule[-0.25em]{0.5pt}{1.5em}\ }}
+  %[\titlerule]
   \titlespacing*{\chapter}      
   {0pt}{0pt}{15pt}  
 
@@ -273,3 +269,4 @@ textfont=it,tableposition=above]{caption}
       \parsep=1pt plus 1pt
       \itemsep=\parsep}
 
+ 

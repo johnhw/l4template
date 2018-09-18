@@ -6,7 +6,7 @@
 % provided by Colin Perkins <csp@dcs.gla.ac.uk>.
 %
 % =============================================================================
-%\NeedsTeXFormat{LaTeX2e}
+
 \ProvidesClass{l4proj}[%
 2009/01/09 Colin Perkins <csp@dcs.gla.ac.uk>.%
 2009/09/16 Modified by Tim Storer <tws@dcs.gla.ac.uk> to support non pdf modes.%
@@ -20,7 +20,7 @@
 \LoadClass[10pt,a4paper]{report}
 
 % Monospace font is Fira Mono Sans
-% the body font used is FBB
+% the body font used is FBB (Bembo)
 
 \usepackage{iftex}
 
@@ -105,7 +105,7 @@
 \usepackage{graphicx}
 
 % allow section styling
-\usepackage{sectsty}
+%\usepackage{sectsty}
 
 % make all cross-references clickable
 \usepackage[hidelinks]{hyperref}
@@ -116,8 +116,8 @@ labelfont={bf,it},
 textfont=it,tableposition=above]{caption}
 
 \newcommand{\secfont}{\normalfont\sffamily}
-% style the sections and the abstract
-\allsectionsfont{\secfont}
+% % style the sections and the abstract
+% \allsectionsfont{\secfont}
 
 
 \renewcommand{\abstractnamefont}{\Large\secfont}
@@ -204,6 +204,7 @@ textfont=it,tableposition=above]{caption}
     \fancyhead[R]{\thepage}%
 }
 
+\usepackage{titlesec}
 % set up chapter headings
 \usepackage{xstring}
 \titleformat{\chapter}[display]
@@ -245,13 +246,17 @@ textfont=it,tableposition=above]{caption}
 % adjust margins
 \setlength{\parindent}{0pt}
 
+
 % use (a) in figures
 \captionsetup{subrefformat=parens}
 
+
+
 % adjust spacing
-\titlespacing{\section}{0pt}{\baselineskip}{-\baselineskip}
-\titlespacing*{\subsection}{0pt}{\parskip}{-\baselineskip}
-\titlespacing*{\subsubsection}{0pt}{\parskip}{-\baselineskip}
+\titlespacing{\section}{0pt}{1.5\baselineskip}{2pt plus 3pt minus 3pt}
+\titlespacing{\subsection}{0pt}{\baselineskip}{-2pt plus 4pt minus 1pt}
+\titleformat{\subsubsection}[runin]{\bfseries }{}{}{}[]
+\titlespacing{\chapter}{0pt}{0pt}{40pt plus 10pt minus 5pt} 
 
 % switch to roman numeral for frontmatter
 \pagenumbering{roman}
@@ -269,4 +274,3 @@ textfont=it,tableposition=above]{caption}
       \parsep=1pt plus 1pt
       \itemsep=\parsep}
 
- 

@@ -159,17 +159,18 @@ textfont=it,tableposition=above]{caption}
           
           \color{UniBlue}
             \noindent
-            {\Huge  \@title \par}%
-            \Large
-            \lineskip .75em%
-            \noindent
-            \begin{tabular}[t]{@{}l}%
-              \textbf{\@author}
-            \end{tabular}\par%
-            \@date
+            {\Huge \scshape  \@title \par}%
+            
+            
+            
+            
           
         \end{center}
- 
+        \vfill
+        {\Large
+        \textbf{\@author}\\
+        \@date}
+            
 
     
   \end{titlepage}%
@@ -250,11 +251,13 @@ textfont=it,tableposition=above]{caption}
 % use (a) in figures
 \captionsetup{subrefformat=parens}
 
-
+% Algorithm typesetting package
+\usepackage[plain, noline, shortend, linesnumberedhidden]{algorithm2e}
+\SetAlFnt{\sffamily \small}
 
 % adjust spacing
-\titlespacing{\section}{0pt}{1.5\baselineskip}{2pt plus 3pt minus 3pt}
-\titlespacing{\subsection}{0pt}{\baselineskip}{-2pt plus 4pt minus 1pt}
+%\titlespacing{\section}{0pt}{1.5\baselineskip}{2pt plus 3pt minus 3pt}
+%\titlespacing{\subsection}{0pt}{\baselineskip}{-2pt plus 4pt minus 1pt}
 \titleformat{\subsubsection}[runin]{\bfseries }{}{}{}[]
 \titlespacing{\chapter}{0pt}{0pt}{40pt plus 10pt minus 5pt} 
 

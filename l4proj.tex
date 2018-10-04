@@ -140,8 +140,7 @@ read these, but they will improve how you write.
 {
     \setlength{\fboxsep}{24pt}
     \begin{center}        
-        \fbox{\parbox{\linewidth}{
-            
+        \fbox{\parbox{\linewidth}{            
             WARNING: If you include material from other sources without full and correct attribution, you are commiting plagiarism. The penalties for plagiarism are severe.
             Quote any included text and cite it correctly. Cite all images, figures, etc. clearly in the caption of the figure.
         }}
@@ -226,6 +225,7 @@ You may include multiple figures in one float, as in Figure \ref{fig:synthetic},
     %(or a blank line to force the subfigure onto a new line)    
     \caption{Synthetic test images for edge detection algorithms. \subref{fig:syn1} shows various gray levels that require an adaptive algorithm. \subref{fig:syn2}
     shows more challenging edge detection tests that have crossing lines. Fusing these into full segments typically requires algorithms like the Hough transform.
+    This is an example of using subfigures, with \texttt{subref}s in the caption.
     }\label{fig:synthetic}
 \end{figure}
 
@@ -242,6 +242,38 @@ For example, we might define:
 \end{equation}    
 where $\hat{f}(\xi)$ is the Fourier transform of the time domain signal $f(x)$.
 
+\subsection{Algorithms}
+Algorithms can be set using \texttt{algorithm2e}, as in Algorithm \ref{alg:metropolis}.
+
+% NOTE: line ends are denoted by \; in algorithm2e
+\begin{algorithm}
+    \DontPrintSemicolon
+    \KwData{$f_X(x)$, a probability density function returing the density at $x$.\; $\sigma$ a standard deviation specifying the spread of the proposal distribution.\;
+    $x_0$, an initial starting condition.}
+    \KwResult{$s=[x_1, x_2, \dots, x_n]$, $n$ samples approximately drawn from a distribution with PDF $f_X(x)$.}
+    \Begin{
+        $s \longleftarrow []$\;
+        $p \longleftarrow f_X(x)$\;
+        $i \longleftarrow 0$\;
+        \While{$i < n$}
+        {
+            $x^\prime \longleftarrow \mathcal{N}(x, \sigma^2)$\;
+            $p^\prime \longleftarrow f_X(x^\prime)$\;
+            $a \longleftarrow \frac{p^\prime}{p}$\;
+            $r \longleftarrow U(0,1)$\;
+            \If{$r<a$}
+            {
+                $x \longleftarrow x^\prime$\;
+                $p \longleftarrow f_X(x)$\;
+                $i \longleftarrow i+1$\;
+                append $x$ to $s$\;
+            }
+        }
+    }
+    
+\caption{The Metropolis-Hastings MCMC algorithm for drawing samples from arbitrary probability distributions, 
+specialised for normal proposal distributions $q(x^\prime|x) = \mathcal{N}(x, \sigma^2)$. The symmetry of the normal distribution means the acceptance rule takes the simplified form.}\label{alg:metropolis}
+\end{algorithm}
 
 \subsection{Tables}
 

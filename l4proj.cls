@@ -29,7 +29,7 @@
   \usepackage{FiraMono}
   \usepackage{FiraSans}
   \usepackage{textcomp}
-  \usepackage{babel}
+  \usepackage[english]{babel}
   \usepackage[T1]{fontenc}
 \else
   % make sure the fonts are actually set

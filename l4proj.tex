@@ -80,6 +80,11 @@
 % reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
 
+% You can use \todo{} to mark text that needs to be fixed. They will appear in large orange 
+% text in the final copy, and you will also get warnings when you compile (so you don't
+% forget to take them out!)
+
+\todo{Remove the guidance notes from your dissertation before submitting!}
 
 Why should the reader care about what are you doing and what are you actually doing?
 \section{Guidance}
@@ -140,7 +145,9 @@ read these, but they will improve how you write.
 \end{itemize}
 
 There is a complete guide on good citation practice by Peter Coxhead available here: \url{http://www.cs.bham.ac.uk/~pxc/refs/index.html}. 
-If you are unsure about how to cite online sources, please see this guide: \url{https://student.unsw.edu.au/how-do-i-cite-electronic-sources}.
+If you are unsure about how to cite online sources, please see this guide: \url{https://student.unsw.edu.au/how-do-i-cite-electronic-sources}. 
+\footnote{Specifying an online resource like `https://developer.android.com/studio`
+in a footnote sometimes makes more sense than including it as a formal reference.}
 
 \subsection{Plagiarism warning}
 
@@ -174,11 +181,21 @@ What is the problem that you want to solve, and how did you arrive at it?
 \section{Guidance}
 Make it clear how you derived the constrained form of your problem via a clear and logical process. 
 
+The analysis chapter explains the process by which you arrive at a concrete design. In software 
+engineering projects, this will include a statement of the requirement capture process and the
+derived requirements. In research projects, it will involve developing a design drawing on
+the work established in the background, and stating how the space of possible projects was
+sensibly narrowed down to what you have done.
+
 %==================================================================================================================================
 \chapter{Design}
 How is this problem to be approached, without reference to specific implementation details? 
 \section{Guidance}
-Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
+Design should cover the abstract design in such a way that someone else might be able to do what you did, 
+but with a different language or library or tool. This might include overall system architecture diagrams,
+user interface designs (wireframes/personas/etc.), protocol specifications, algorithms, data set design choices,
+among others. Specific languages, technical choices, libraries and such like should not usually appear in the design. These are implementation details.
+
 
 %==================================================================================================================================
 \chapter{Implementation}
@@ -448,16 +465,17 @@ Typical inclusions in the appendices are:
 
 \begin{itemize}
 \item
-  Copies of ethics approvals (required if obtained)
+  Copies of ethics approvals (you must include these if you needed to get them)
 \item
-  Copies of questionnaires etc. used to gather data from subjects.
+  Copies of questionnaires etc. used to gather data from subjects. Don't include
+  voluminous data logs; instead submit these electronically alongside your source code.
 \item
   Extensive tables or figures that are too bulky to fit in the main body of
   the report, particularly ones that are repetitive and summarised in the body.
-
-\item Outline of the source code (e.g. directory structure), or other architecture documentation like class diagrams.
-
-\item User manuals, and any guides to starting/running the software.
+\item Outline of the source code (e.g. directory structure), 
+    or other architecture documentation like class diagrams.
+\item User manuals, and any guides to starting/running the software. 
+Your equivalent of \texttt{readme.md} should be included.
 
 \end{itemize}
 

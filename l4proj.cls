@@ -293,3 +293,5 @@ textfont=it,tableposition=above]{caption}
       \parsep=1pt plus 1pt
       \itemsep=\parsep}
 
+\usepackage{soul}
+\newcommand{\todo}[1]{\large \hl{#1}\PackageWarning{TODO:}{#1!}}

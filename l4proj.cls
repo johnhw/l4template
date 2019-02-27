@@ -293,5 +293,10 @@ textfont=it,tableposition=above]{caption}
       \parsep=1pt plus 1pt
       \itemsep=\parsep}
 
+% allow highlighting of text for todo notes
 \usepackage{soul}
-\newcommand{\todo}[1]{\large \hl{#1}\PackageWarning{TODO:}{#1!}}
+\newcommand{\todo}[1]{\large \hl{TODO: #1}\PackageWarning{TODO:}{#1!}}
+
+% make urls less bulky and ugly
+\renewcommand{\UrlFont}{\ttfamily\small}
+\expandafter\renewcommand\csname @makefntext\endcsname[1]{\makefootmark\renewcommand{\UrlFont}{\footnotesize} #1}

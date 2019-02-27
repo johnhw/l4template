@@ -145,8 +145,8 @@ read these, but they will improve how you write.
 \end{itemize}
 
 There is a complete guide on good citation practice by Peter Coxhead available here: \url{http://www.cs.bham.ac.uk/~pxc/refs/index.html}. 
-If you are unsure about how to cite online sources, please see this guide: \url{https://student.unsw.edu.au/how-do-i-cite-electronic-sources}. 
-\footnote{Specifying an online resource like `https://developer.android.com/studio`
+If you are unsure about how to cite online sources, please see \citet{UNSWWebsite}. 
+\footnote{Specifying an online resource like \url{https://developer.android.com/studio}
 in a footnote sometimes makes more sense than including it as a formal reference.}
 
 \subsection{Plagiarism warning}
@@ -183,7 +183,9 @@ Make it clear how you derived the constrained form of your problem via a clear a
 
 The analysis chapter explains the process by which you arrive at a concrete design. In software 
 engineering projects, this will include a statement of the requirement capture process and the
-derived requirements. In research projects, it will involve developing a design drawing on
+derived requirements.
+
+In research projects, it will involve developing a design drawing on
 the work established in the background, and stating how the space of possible projects was
 sensibly narrowed down to what you have done.
 
@@ -205,7 +207,7 @@ You can't talk about everything. Cover the high level first, then cover importan
 
 
 
-\section{General points}
+\section{General guidance for techincal writing}
 
 These points apply to the whole dissertation, not just this chapter.
 
@@ -406,7 +408,14 @@ How good is your solution? How well did you solve the general problem, and what 
 \end{itemize}
 
 \section{Evidence}
-Make sure you present your evidence well. Use appropriate visualisations, reporting techniques and statistical analysis, as appropriate.
+Make sure you present your evidence well. Use appropriate visualisations, 
+reporting techniques and statistical analysis, as appropriate. The point is not
+to dump all the data you have but to present an argument well supported by evidence gathered.
+
+If you use numerical evidence, specify reasonable numbers of significant digits; don't state ``18.41141\% of users were successful'' if you only had 20 users. If you average \textit{anything}, present both a measure of central tendency (e.g. mean, median) \textit{and} a measure of spread (e.g. standard deviation, min/max, interquartile range).
+
+If you use statistical procedures, make sure you understand the process you are using,
+and that you check the required assumptions hold in your case. 
 
 If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
 \begin{itemize}

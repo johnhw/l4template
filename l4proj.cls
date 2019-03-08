@@ -53,6 +53,7 @@
 \bibpunct{(}{)}{;}{a}{}{;}
 
 
+
 \usepackage{etoolbox}
 \usepackage[compact]{titlesec} % section heading formatting
 \usepackage{color} % colors
@@ -63,6 +64,11 @@
 % remove dots from ToC
 \usepackage[titles]{tocloft} 
 \renewcommand{\cftdot}{}
+% increase spacing in ToC to avoid ascenders and descenders colliding
+\renewcommand\cftsecafterpnum{\vskip 3pt}
+\renewcommand\cftbeforechapskip{5pt}
+\renewcommand\cftsubsecafterpnum{\vskip 1.5pt}
+\renewcommand\cftchapafterpnum{\vskip 4pt}
 \usepackage[nottoc]{tocbibind}
 
 % from: https://gist.github.com/FelipeCortez/10729134
@@ -299,4 +305,3 @@ textfont=it,tableposition=above]{caption}
 
 % make urls less bulky and ugly
 \renewcommand{\UrlFont}{\ttfamily\small}
-\expandafter\renewcommand\csname @makefntext\endcsname[1]{\makefootmark\renewcommand{\UrlFont}{\footnotesize} #1}

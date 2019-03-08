@@ -157,6 +157,17 @@ in a footnote sometimes makes more sense than including it as a formal reference
     Quote any included text and cite it correctly. Cite all images, figures, etc. clearly in the caption of the figure.
 \end{highlight_title}
 
+\subsection{Quoting text}
+
+If you are quoting a long passage, use a \texttt{quote} environment:
+
+\begin{quote}
+     If you scribble your thoughts any which way, your readers will surely feel that you care nothing about them. They will mark you down as an egomaniac or a chowderhead -or, worse, they will stop reading you. The most damning revelation you can make about yourself is that you do not know what is interesting and what is not.
+\end{quote} \citep{Von80}
+
+If you are quoting inline, like Simon Peyton-Jones' following remark, use quotation marks ``Conveying the intuition is primary, not
+secondary'' \citep{Pey17}.
+
 
 %==================================================================================================================================
 \chapter{Background}
@@ -207,7 +218,7 @@ You can't talk about everything. Cover the high level first, then cover importan
 
 
 
-\section{General guidance for techincal writing}
+\section{General guidance for technical writing}
 
 These points apply to the whole dissertation, not just this chapter.
 
@@ -470,6 +481,7 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
 
 \chapter{Appendices}
 
+Use separate appendix chapters for groups of ancillary material that support your dissertation. 
 Typical inclusions in the appendices are:
 
 \begin{itemize}
@@ -491,16 +503,20 @@ Your equivalent of \texttt{readme.md} should be included.
 \textbf{Don't include your source code in the appendices}. It will be
 submitted separately.
 
+
+
 \end{appendices}
 
 %==================================================================================================================================
 %   BIBLIOGRAPHY   
 
-% The bibliography style is abbrvnat
+% The bibliography style is agsm (Harvard)
 % The bibliography always appears last, after the appendices.
 
-\bibliographystyle{abbrvnat}
+\bibliographystyle{agsm}
 
+% Force the bibliography not to be numbered
+\renewcommand{\thechapter}{0} 
 \bibliography{l4proj}
 
 \end{document}

@@ -1,10 +1,14 @@
 % REMEMBER: You must not plagiarise anything in your report. Be extremely careful.
-
 \documentclass{l4proj}
 
     
+%==============================================================================
+% Put any additional packages here
+% You can add any packages you want, as long as it does not alter
+% the overall format (e.g. don't change the margins or the reference style).
 %
-% put any additional packages here
+\usepackage{pdfpages} % if you want to include a PDF for an ethics checklist, for example
+%
 %
 
 \begin{document}
@@ -33,8 +37,10 @@
 \chapter*{Acknowledgements}
 % Enter any acknowledgements here. This is optional; you may leave this blank if you wish,
 % or remove the entire chapter
-We give thanks to the Gods of LaTeX, who in their eternal graciousness, 
-have granted that this document may compile without errors or overfull boxes.
+%
+% We give thanks to the Gods of LaTeX, who in their eternal graciousness, 
+% have granted that this document may compile without errors or overfull hboxes.
+%
 
 %==============================================================================
 
@@ -66,14 +72,13 @@ have granted that this document may compile without errors or overfull boxes.
 % using Arabic numerals. Therefore, immediately after the first call to \chapter we need the call
 % \pagenumbering{arabic} and this should be called once only in the document. 
 %
-% Do not alter the bibliography style.
 %
 % The first Chapter should then be on page 1. You are allowed 40 pages for a 40 credit project and 30 pages for a 
 % 20 credit report. This includes everything numbered in Arabic numerals (excluding front matter) up
 % to but excluding the appendices and bibliography.
 %
 % You must not alter text size (it is currently 10pt) or alter margins or spacing.
-%
+% Do not alter the bibliography style.
 %
 %==================================================================================================================================
 %
@@ -225,18 +230,13 @@ What did you do to implement this idea, and what technical achievements did you 
 \section{Guidance}
 You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
 
-
-
 \section{General guidance for technical writing}
 
 These points apply to the whole dissertation, not just this chapter.
 
-
-
 \subsection{Figures}
 \emph{Always} refer to figures included, like Figure \ref{fig:relu}, in the body of the text. Include full, explanatory captions and make sure the figures look good on the page.
 You may include multiple figures in one float, as in Figure \ref{fig:synthetic}, using \texttt{subcaption}, which is enabled in the template.
-
 
 
 % Figures are important. Use them well.

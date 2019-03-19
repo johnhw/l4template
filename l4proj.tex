@@ -434,6 +434,18 @@ to dump all the data you have but to present an argument well supported by evide
 
 If you use numerical evidence, specify reasonable numbers of significant digits; don't state ``18.41141\% of users were successful'' if you only had 20 users. If you average \textit{anything}, present both a measure of central tendency (e.g. mean, median) \textit{and} a measure of spread (e.g. standard deviation, min/max, interquartile range).
 
+You can use \texttt{siunitx} to define units, space numbers neatly, and set the precision for the whole LaTeX document. 
+
+% setup siunitx to have two decimal places
+\sisetup{
+	round-mode = places,
+	round-precision = 2
+}
+
+For example, these numbers will appear with two decimal places: \num{3.141592}, \num{2.71828}, and this one will appear with reasonable spacing \num{1000000}.
+
+
+
 If you use statistical procedures, make sure you understand the process you are using,
 and that you check the required assumptions hold in your case. 
 

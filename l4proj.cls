@@ -305,3 +305,6 @@ textfont=it,tableposition=above]{caption}
 
 % make urls less bulky and ugly
 \renewcommand{\UrlFont}{\ttfamily\small}
+
+% units for nice formatting of numbers
+\usepackage{sinunitx}

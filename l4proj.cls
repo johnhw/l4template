@@ -224,6 +224,16 @@ textfont=it,tableposition=above]{caption}
   \titlespacing*{\chapter}      
   {0pt}{0pt}{15pt}  
 
+% let us define a definition for unnumbered chapters.
+% so we don't get a numbered bibliography or table of contents
+\titleformat{name=\chapter,numberless}
+            [display]
+            {\normalfont\huge\bfseries\secfont}
+            {}
+            {0pt}
+            {}
+
+
 % Educational consent form
 \newcommand{\educationalconsent}{
     \ifdefined\consentname
@@ -264,11 +274,8 @@ textfont=it,tableposition=above]{caption}
 \end{tcolorbox}
 }
 
-
-
 % adjust margins
 \setlength{\parindent}{0pt}
-
 
 % use (a) in figures
 \captionsetup{subrefformat=parens}
@@ -307,4 +314,4 @@ textfont=it,tableposition=above]{caption}
 \renewcommand{\UrlFont}{\ttfamily\small}
 
 % units for nice formatting of numbers
-\usepackage{sinunitx}
+\usepackage{siunitx}

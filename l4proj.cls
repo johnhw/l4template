@@ -308,7 +308,7 @@ textfont=it,tableposition=above]{caption}
 
 % allow highlighting of text for todo notes
 \usepackage{soul}
-\newcommand{\todo}[1]{\large \hl{TODO: #1}\PackageWarning{TODO:}{#1!}}
+\newcommand{\todo}[1]{\large \hl{TODO: #1}\PackageWarning{TODO:}{#1!} \normalsize}
 
 % make urls less bulky and ugly
 \renewcommand{\UrlFont}{\ttfamily\small}
